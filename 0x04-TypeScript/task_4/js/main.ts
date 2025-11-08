@@ -4,11 +4,13 @@
 /// <reference path="./subjects/React.ts" />
 /// <reference path="./subjects/Java.ts" />
 
-const cpp = new Subjects.Cpp();
-const java = new Subjects.Java();
-const react = new Subjects.React();
+// Create instances without Subjects namespace prefix
+const cpp = new Cpp();
+const java = new Java();
+const react = new React();
 
-const cTeacher: Subjects.Teacher = {
+// Create teacher with correct type annotation
+const cTeacher: Teacher = {
   firstName: 'John',
   lastName: 'Doe',
   experienceTeachingC: 10,
@@ -25,3 +27,10 @@ console.log('Java');
 java.setTeacher(cTeacher);
 console.log(java.getRequirements());
 console.log(java.getAvailableTeacher());
+
+// React tests
+console.log('React');
+react.setTeacher(cTeacher);
+console.log(react.getRequirements());
+console.log(react.getAvailableTeacher());
+
