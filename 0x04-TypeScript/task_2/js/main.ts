@@ -137,8 +137,8 @@ function createEmployee(salary: number | string): Director | Teacher {
   return new Director();
 }
 
-// Type predicate to check if employee is a Director
-function isDirector(employee: Director | Teacher): employee is Director {
+// Type predicate to check if employee is a Director - EXPORTED
+export function isDirector(employee: Director | Teacher): employee is Director {
   return employee instanceof Director;
 }
 
@@ -158,4 +158,3 @@ console.log(executeWork(createEmployee(1000)));
 console.log(createEmployee(200));
 console.log(createEmployee(1000));
 console.log(createEmployee('$500'));
-
